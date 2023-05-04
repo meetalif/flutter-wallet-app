@@ -11,6 +11,12 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
     Future.delayed(
+      Duration(seconds: 1),
+      () {
+        Get.changeTheme(WaveTheme());
+      },
+    );
+    Future.delayed(
       Duration(seconds: 2),
       () async {
         await Get.to(() => HomePage());
